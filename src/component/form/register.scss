@@ -1,0 +1,35 @@
+@import "../../styles/_variables.scss"; 
+
+.register-container{
+    background-image: url(https://media.istockphoto.com/id/1879549361/photo/buy-or-sell-real-estate-mortgage-sale-representative-offer-house-purchase-contract-to-buy-a.jpg?s=612x612&w=0&k=20&c=C-6pwBqnlrJYRdwEO_iHi8-pBE2eAhJ6i_2fwDfQ4Jk=);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.788);
+    // backdrop-filter: blur(0.5);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+form{
+    width: 350px !important;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    margin: auto;
+    align-items: center;
+}
+input{
+    margin: 10px 0;
+    border: none;border-color: rgb(219, 216, 216);
+    // box-shadow: 0px 3px 1px 0px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.16), 0 8px 8px rgba(0,0,0,0.20);
+    padding: 10px ;
+    outline: none;
+    width: 100%;
+    border-radius: 10px;
+}
+.submit-btn{
+    background-color: navy;
+    color: white;
+    width: 40%;
+}
