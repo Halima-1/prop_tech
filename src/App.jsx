@@ -20,7 +20,7 @@ function App() {
     );
   };
   return (
-      <BrowserRouter>
+      <BrowserRouter basename='prop_tech'>
       <Routes>
         <Route path='/' element={<Layout />}> 
         <Route path='/' element={<Home />} />
