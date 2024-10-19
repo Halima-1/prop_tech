@@ -1,19 +1,17 @@
-import "./header.scss"
+import "./header.scss";
 // import "./header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import { BsCart2, BsHeart } from "react-icons/bs";
 import { BiLogOut } from "react-icons/bi";
+import { PiHamburgerLight } from "react-icons/pi";
 function Header() {
   const navigate = useNavigate();
   const logout = () => {
     localStorage.removeItem("user");
     navigate("/login", { replace: true });
-    localStorage.setItem(
-      "validatn",
-      JSON.stringify({ isLoggin: false})
-    );
+    localStorage.setItem("validatn", JSON.stringify({ isLoggin: false }));
   };
-  
+
   return (
     <header>
       <nav>
@@ -33,16 +31,13 @@ function Header() {
             </NavLink>
           </li>
           <li>
-            <select name="categories" id="cati" className={"nav-item"}
-            >
-            <option value="null">Category</option>
+            <select name="categories" id="cati" className={"nav-item"}>
+              <option value="null">Category</option>
 
-                <option value="landlord">Landlord</option>
-                <option value="client">Tenant</option>
-                <option value="agent">Estate agent</option>
-
+              <option value="landlord">Landlord</option>
+              <option value="client">Tenant</option>
+              <option value="agent">Estate agent</option>
             </select>
-            
           </li>
           <li>
             <NavLink
@@ -57,29 +52,32 @@ function Header() {
           </li>
           <li>
             <NavLink
-                          className={"nav-item"}
-
+              className={"nav-item"}
               to={"/login"}
               style={({ isActive }) =>
                 isActive ? { color: "red" } : undefined
               }
             >
-                Sign in
+              Sign in
             </NavLink>
           </li>
           <li>
             <NavLink
-                          className={"nav-item"}
-
+              className={"nav-item"}
               to={"/register"}
               style={({ isActive }) =>
                 isActive ? { color: "red" } : undefined
               }
             >
-                Sign up
+              Sign up
             </NavLink>
           </li>
         </ul>
+        <div className="menuBtn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
   );

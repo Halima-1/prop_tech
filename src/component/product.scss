@@ -1,0 +1,247 @@
+
+@import "../styles/_variables.scss"; 
+.side{
+  display: block;
+  
+  @media (min-width: 576px) {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    display: none;
+
+  }
+   @media (min-width: 1100px) {
+    display: none;
+
+  }
+}
+.searchContainer{
+  display: none;
+  // visibility: hidden;
+  grid-template-columns: repeat(4, 1fr);
+  width: 85%;
+  margin: auto;
+  padding: 30px 20px;
+  gap: 30px;
+
+  div{
+    display: flex;
+    flex-direction: column;
+    // width: 22%;
+
+    div{
+      @include flex;
+      gap: 20px;
+      width: 100%;
+      // background-color: $bg2;
+      margin-top: 20px;
+      padding-left: 15px;
+      border: 1px solid grey;
+      border-radius: 10px;
+      
+      .inputIcon{
+        margin-top: 5px;
+      }
+      input{
+        outline: none;
+        border: none;
+        padding: 7px 0;
+        background-color: $bg;
+        border-radius: 10px;
+      }
+     
+    }
+    
+  }
+  .searchBtn{
+    cursor: pointer;
+    // size: 40px;
+    margin-top: 45px;
+  }
+
+  @media (min-width: 576px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin: auto;
+    padding: 30px 20px;
+    gap: 30px;
+  
+    div{
+      display: flex;
+      flex-direction: column;
+      // width: 22%;
+  
+      div{
+        @include flex;
+        gap: 20px;
+        width: 100%;
+        // background-color: $bg2;
+        margin-top: 20px;
+        padding-left: 15px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        
+        .inputIcon{
+          margin-top: 5px;
+        }
+        input{
+          outline: none;
+          border: none;
+          padding: 7px 0;
+          background-color: $bg;
+          border-radius: 10px;
+        }
+       
+      }
+      
+    }
+    .searchBtn{
+      cursor: pointer;
+      // size: 40px;
+      margin-top: 45px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin: auto;
+    padding: 30px 20px;
+    gap: 30px;
+  
+    div{
+      display: flex;
+      flex-direction: column;
+      // width: 22%;
+  
+      div{
+        @include flex;
+        gap: 20px;
+        width: 100%;
+        // background-color: $bg2;
+        margin-top: 20px;
+        padding-left: 15px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        
+        .inputIcon{
+          margin-top: 5px;
+        }
+        input{
+          outline: none;
+          border: none;
+          padding: 7px 0;
+          background-color: $bg;
+          border-radius: 10px;
+        }
+       
+      }
+      
+    }
+    .searchBtn{
+      cursor: pointer;
+      // size: 40px;
+      margin-top: 45px;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 85%;
+    margin: auto;
+    padding: 30px 20px;
+    gap: 30px;
+  
+    div{
+      display: flex;
+      flex-direction: column;
+      // width: 22%;
+  
+      div{
+        @include flex;
+        gap: 20px;
+        width: 100%;
+        // background-color: $bg2;
+        margin-top: 20px;
+        padding-left: 15px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        
+        .inputIcon{
+          margin-top: 5px;
+        }
+        input{
+          outline: none;
+          border: none;
+          padding: 7px 0;
+          background-color: $bg;
+          border-radius: 10px;
+        }
+       
+      }
+      
+    }
+    .searchBtn{
+      cursor: pointer;
+      // size: 40px;
+      margin-top: 45px;
+    }
+  }
+}
+.productsContainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+  gap: 10px; /* Space between items */
+  padding: 30px;
+
+
+  &_div{
+width: 90%;
+margin-top: 25px;
+    div{
+        border-radius: 10px;
+        width: 100%;
+
+        img{
+            width: 100%;
+            height: 200px;
+            border-radius: 10px;
+            object-position: center center;
+        }
+    }
+  }
+}
+.wish{
+  size: 18px;
+  position: relative;
+  top: 30px;
+  left: 220px;
+}
+.wish:hover{
+  background-color: rgb(25, 190, 25);
+  color: white;
+  border-radius: 100%;
+  width: 20px;
+}
+.productElement{
+  position: relative;
+  top: 130px;
+  // align-items: center;
+  background-color: aliceblue;
+  font-size: 16px;
+  text-align: center;
+  // width: max-content;
+  padding: 5px 0;
+  margin: auto;
+}
+.hideProductIcons{
+  display: none;
+  visibility: hidden;
+}
+.showProductIcons{
+  display: block;
+}

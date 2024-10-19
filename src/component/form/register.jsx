@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./register.scss"
+import "./register.scss";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 function Register() {
-  const navigate = useNavigate()
-    // const userCart = [];
+  const navigate = useNavigate();
+  // const userCart = [];
   const [formData, setFormData] = useState({
     fname: "",
     email: "",
@@ -55,18 +55,17 @@ function Register() {
     }
 
     users.push(formData);
-// setFormData({ ...formData, userCart });
-// // localStorage.setItem("formData", JSON.stringify(formData));
-//         localStorage.setItem(
-//           `${formData.fname}'s cart`,
-//           JSON.stringify(formData.cart)
-//         );
+    // setFormData({ ...formData, userCart });
+    // // localStorage.setItem("formData", JSON.stringify(formData));
+    //         localStorage.setItem(
+    //           `${formData.fname}'s cart`,
+    //           JSON.stringify(formData.cart)
+    //         );
 
-localStorage.setItem("users", JSON.stringify(users));
-          navigate("/login", { replace: true });
-
+    localStorage.setItem("users", JSON.stringify(users));
+    navigate("/login", { replace: true });
   };
-  const category ="Category:" + localStorage.getItem("category");
+  const category = "Category:" + localStorage.getItem("category");
   return (
     <div className="register-container">
       {/* <p>{user.name}</p>
@@ -82,14 +81,16 @@ localStorage.setItem("users", JSON.stringify(users));
       >
         {/* <h2 style={({ color: "navy", marginBottom: 30 })}>Sign up</h2> */}
         <input
+          className="formInput"
           type="text"
           name="email"
           value={category}
           disabled
           onChange={handleChange}
-          style={{color:"blue"}}
+          style={{ color: "blue" }}
         />
         <input
+          className="formInput"
           type="text"
           name="fname"
           id=""
@@ -100,6 +101,7 @@ localStorage.setItem("users", JSON.stringify(users));
 
         {errData.fname && <p style={{ color: "red" }}>{errData.fname}</p>}
         <input
+          className="formInput"
           type="text"
           name="email"
           value={formData.email}
@@ -108,6 +110,7 @@ localStorage.setItem("users", JSON.stringify(users));
         />
         {errData.email && <p style={{ color: "red" }}>{errData.email}</p>}
         <input
+          className="formInput"
           type="text"
           name="username"
           value={formData.username}
@@ -116,6 +119,7 @@ localStorage.setItem("users", JSON.stringify(users));
         />
         {errData.username && <p style={{ color: "red" }}>{errData.username}</p>}
         <input
+          className="formInput"
           type="tel"
           name="phone"
           value={formData.phone}
@@ -124,6 +128,7 @@ localStorage.setItem("users", JSON.stringify(users));
         />
         {errData.phone && <p style={{ color: "red" }}>{errData.phone}</p>}
         <input
+          className="formInput"
           type="password"
           name="password"
           value={formData.password}
@@ -132,6 +137,7 @@ localStorage.setItem("users", JSON.stringify(users));
         />
         {errData.password && <p style={{ color: "red" }}>{errData.password}</p>}
         <input
+          className="formInput"
           type="password"
           name="cpass"
           value={formData.cpass}

@@ -73,6 +73,7 @@ function Login() {
         {errData.notify && <p style={{ color: "green" }}>{errData.notify}</p>}
 
         <input
+          className="formInput"
           type="text"
           name="email"
           value={formData.email}
@@ -82,6 +83,7 @@ function Login() {
         {errData.email && <p style={{ color: "red" }}>{errData.email}</p>}
 
         <input
+          className="formInput"
           type="password"
           name="password"
           value={formData.password}
