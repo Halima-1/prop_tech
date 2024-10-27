@@ -2,13 +2,13 @@ import { useNavigate } from "react-router-dom";
 import "./landing.scss";
 
 function Tenant() {
-  const navigate = useNavigate()
-  const handleGetStartedBtn =() =>{
-    navigate("/register", {replace:true})
-}
+  const navigate = useNavigate();
+  const handleGetStartedBtn = () => {
+    navigate("/register", { replace: true });
+  };
   return (
     <>
-      <section className="container">
+      <section className="containerr">
         <h1>Find a home you will love to live</h1>
         <p>
           Rent from owners or match with an agent. <br />
@@ -67,7 +67,7 @@ function Tenant() {
           </div>
         </div>
         <div className="features-container reverse">
-        <div>
+          <div>
             <h1>Rent smart and fast</h1>
             <p>
               Search thousands of apartment and schedule a visit with our
@@ -80,7 +80,6 @@ function Tenant() {
               alt=""
             />
           </div>
-         
         </div>
       </section>
     </>

@@ -7,34 +7,36 @@ import { CiLocationOn } from "react-icons/ci";
 import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineTypeSpecimen } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import SideNav from "./sideNavBar";
+import apartments from "./apartments";
 
-const Product = () => {
+const Product = ({ toggle }) => {
   const [product, setProduct] = useState();
   const [isMounted, setIsMounted] = useState(true);
   const route = useNavigate();
   // const [displayDetails, setDisplayDetails] = useState({});
 
-  useEffect(() => {
-    const fetchProduct = async () => {
-      const response = await fetch("/api/");
-      const data = await response.json();
-      //   console.log(data);
+  // useEffect(() => {
+  //   const fetchProduct = async () => {
+  //     const response = await fetch("/api/");
+  //     const data = await response.json();
+  //     //   console.log(data);
 
-      if (isMounted) {
-        // Check if component is still mounted before updating state
-        setProduct(data);
-      }
-    };
+  //     if (isMounted) {
+  //       // Check if component is still mounted before updating state
+  //       setProduct(data);
+  //     }
+  //   };
 
-    fetchProduct();
-    console.log(product);
-    console.log(isMounted);
-    // Cleanup function to prevent state update if component unmounts
-    return () => {
-      setIsMounted(false); // Mark component as unmounted
-    };
-  }, []); // Empty dependency array to run effect once on mount
-  console.log(product);
+  //   fetchProduct();
+  //   console.log(product);
+  //   console.log(isMounted);
+  //   // Cleanup function to prevent state update if component unmounts
+  //   return () => {
+  //     setIsMounted(false); // Mark component as unmounted
+  //   };
+  // }, []); // Empty dependency array to run effect once on mount
+  console.log(apartments);
 
   // UPDATING USER'S DETAILS AND WISHLIST
   const user = JSON.parse(localStorage.getItem("user")) || [];
@@ -68,41 +70,12 @@ const Product = () => {
 
   return (
     <>
-      <aside className="side ">
-        <div>
-          <p>Looking for </p>
-          <div>
-            {/* <label htmlFor="location">Residence in:</label> */}
-            <CiLocationOn className="inputIcon" />
-            <input
-              type="text"
-              id="location"
-              placeholder="type preferred location"
-            />
-          </div>
-        </div>
-        <div>
-          <p>Price range</p>
-          <div>
-            {/* <label htmlFor="location">Price range:</label> */}
-            <GiPriceTag className="inputIcon" />
-            <input type="text" id="price" placeholder="e.g 100 - 500,000" />
-          </div>
-        </div>{" "}
-        <div>
-          <p>Type </p>
-          <div>
-            <MdOutlineTypeSpecimen className="inputIcon" />
-            <input type="text" id="type" placeholder="e.g Self contain" />
-          </div>
-        </div>
-        <BsSearch className="searchBtn" />
-      </aside>
+      {/* <SideNav /> */}
+      {toggle && <SideNav />}
       <section className="searchContainer">
         <div>
           <p>Looking for </p>
           <div>
-            {/* <label htmlFor="location">Residence in:</label> */}
             <CiLocationOn className="inputIcon" />
             <input
               type="text"
@@ -129,8 +102,8 @@ const Product = () => {
         <BsSearch className="searchBtn" />
       </section>
       <section className="productsContainer">
-        {product
-          ? product.map((product, index) => (
+        {apartments
+          ? apartments.slice(0, 40).map((product, index) => (
               <div
                 onMouseEnter={() => {
                   const productIcon = document.getElementById(
@@ -176,13 +149,12 @@ const Product = () => {
                   onClick={() => handleAddToWishlist(product)}
                 />
                 <div>
-                  <img src={product.gallery[2]} alt="" />
+                  <img src={product.images[0]} alt="" />
                 </div>
                 <div className="productDetails">
-                  <p>{product.name}</p>
+                  <p>{product.typeOfApartment}</p>
                   <p>{product.location.slice(0, 50) + "..."}</p>
-                  <span>#{product.rooms[0].price_per_night},000</span>
-                  <span></span>
+                  <span>#{product.price}</span>
                   <span></span>
                 </div>
               </div>

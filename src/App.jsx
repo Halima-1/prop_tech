@@ -1,4 +1,4 @@
-// import { useState } from 'react'
+import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 // import './App.css'
@@ -9,14 +9,21 @@ import Login from "./component/form/login";
 import Register from "./component/form/register";
 import Landlord from "./component/home/landlord";
 import Product from "./component/product";
-import Details from "./component/productDetails";
+import Details from "./component/productDetails/productDetails";
 import Wishlist from "./component/wishlist/wishlist";
+import SideNav from "./component/sideNavBar";
 function App() {
-  // const [count, setCount] = useState(0)
+  const [toggle, setToggle] = useState(false);
+  // const [toggleOff, setToggleOff] = useState(true);
+
+  const toggleSidebar = () => {
+    setToggle(!toggle);
+    console.log("hi");
+  };
   function Layout() {
     return (
       <>
-        <Header />
+        <Header onToggle={toggleSidebar} toggle={toggle} />
         <Outlet />
         <Footer />
       </>
@@ -27,7 +34,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product" element={<Product toggle={toggle} />} />
           <Route path="/productDetails/:id" element={<Details />} />
           <Route path="/wishlist" element={<Wishlist />} />
 

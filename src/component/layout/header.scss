@@ -8,8 +8,11 @@
     box-sizing: border-box;
     color: $text-color1;
     font-family: "Lato", serif;
-
     
+}
+*svg{
+    color: white !important;
+
 }
 h1,h2{
     font-family: "Rubik", sans-serif;
@@ -20,8 +23,21 @@ p{
 header{
     
 }
+.menuBtn{
+    margin-top: 10px;
+    width: max-content;
+    svg{
+        width: 30px;
+            height: 30px;
+        path{
+            color: $text-color3;
+            
+        }
+    }
+   
+}
 nav{
-    background-color: $bg2;
+    background-color: $bg3;
     padding:  20px;
     // position: fixed;
     top: 0;
@@ -31,23 +47,28 @@ nav{
     justify-content: space-between;
     color: $text-color2;
     font-size: 14px;
-h1{
+h2{
     margin: 0;
+    
+
+    span{
+        color: $text-color3;
+    }
 }
 div{
     width: 30px;
 
-    span{
-        width: 30px ;
-        height: 5px;
-        background-color: white;
-        padding: 1px 0;
-        display: block;
-        border-radius: 5px;
-        margin-top: 3px;
+    // span{
+    //     width: 30px ;
+    //     height: 5px;
+    //     background-color: white;
+    //     padding: 1px 0;
+    //     display: block;
+    //     border-radius: 5px;
+    //     margin-top: 3px;
 
         
-    }
+    // }
 
     @media (min-width: 768px) {
         display: none;
