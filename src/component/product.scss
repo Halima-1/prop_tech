@@ -104,14 +104,13 @@
   }
 
 .searchContainer{
-  display: none;
-  // visibility: hidden;
-  grid-template-columns: repeat(4, 1fr);
-  width: 85%;
-  margin: auto;
-  padding: 30px 20px;
-  gap: 30px;
-
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  // flex-direction: column;
+  width: 50% !important;
+  margin-left: 20px;
+  // gap: 5px;
+  
   div{
     display: flex;
     flex-direction: column;
@@ -119,7 +118,7 @@
 
     div{
       @include flex;
-      gap: 20px;
+      // gap: 20px;
       width: 100%;
       // background-color: $bg2;
       margin-top: 20px;
@@ -143,8 +142,16 @@
   }
   .searchBtn{
     cursor: pointer;
-    // size: 40px;
+    width: 100px;
     margin-top: 45px;
+    border: none;
+    background-color: $bg3;
+    padding: 7px;
+    border-radius: 10px;
+
+    path{
+      color: white;
+    }
   }
 
   @media (min-width: 576px) {
@@ -186,7 +193,6 @@
     }
     .searchBtn{
       cursor: pointer;
-      // size: 40px;
       margin-top: 45px;
     }
   }
@@ -228,17 +234,23 @@
       }
       
     }
-    .searchBtn{
+    button{
       cursor: pointer;
-      // size: 40px;
+      // width: 40px;
       margin-top: 45px;
+      border: none;
+      // background-color: $bg;
+
+      svg{
+        
+      }
     }
   }
 
   @media (min-width: 1100px) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    width: 85%;
+    width: 90% !important;
     margin: auto;
     padding: 30px 20px;
     gap: 30px;
@@ -282,27 +294,56 @@
 .productsContainer{
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr); 
+    grid-template-columns: repeat(2, 1fr); 
   gap: 10px;
-  padding: 30px;
+  // padding: 30px;
   margin: 0 auto;
 
   &_div{
-width: 90%;
+// width: 50%;
 margin-top: 25px;
     div{
         border-radius: 10px;
-        width: 100%;
+        width: 90%;
 
         img{
             width: 100%;
-            height: 200px;
+            height: 170px;
             border-radius: 10px;
             object-position: center center;
         }
     }
   }
-
+  .wish{
+    size: 18px;
+    position: relative;
+    top: 30px;
+    left: 150px;
+  }
+  .wish:hover{
+    background-color: rgb(25, 190, 25);
+    color: white;
+    border-radius: 100%;
+    width: 20px;
+  }
+  .productElement{
+    position: relative;
+    top: 130px;
+    // align-items: center;
+    background-color: aliceblue;
+    font-size: 16px;
+    text-align: center;
+    // width: max-content;
+    padding: 5px 0;
+    margin: auto;
+  }
+  .hideProductIcons{
+    display: none;
+    visibility: hidden;
+  }
+  .showProductIcons{
+    display: block;
+  }
   @media (min-width: 576px) {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -318,33 +359,3 @@ margin-top: 25px;
 
   }
 
-.wish{
-  size: 18px;
-  position: relative;
-  top: 30px;
-  left: 220px;
-}
-.wish:hover{
-  background-color: rgb(25, 190, 25);
-  color: white;
-  border-radius: 100%;
-  width: 20px;
-}
-.productElement{
-  position: relative;
-  top: 130px;
-  // align-items: center;
-  background-color: aliceblue;
-  font-size: 16px;
-  text-align: center;
-  // width: max-content;
-  padding: 5px 0;
-  margin: auto;
-}
-.hideProductIcons{
-  display: none;
-  visibility: hidden;
-}
-.showProductIcons{
-  display: block;
-}

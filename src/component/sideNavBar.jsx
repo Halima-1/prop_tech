@@ -14,28 +14,16 @@ function SideNav({ toggle }) {
     localStorage.setItem("validatn", JSON.stringify({ isLoggin: false }));
   };
 
-  //   function toggleSidebar() {
-  //     const sideNavBar = document.getElementById("sideNavBar");
-
-  //     console.log(sideNavBar);
-  //     if (sideNavBar.classList.contains("hide")) {
-  //       sideNavBar.classList.remove("hide");
-  //       sideNavBar.classList.add("show");
-  //     } else {
-  //       sideNavBar.classList.remove("show");
-  //       sideNavBar.classList.add("hide");
-  //     }
-  //   }
   return (
     <>
       {/* // side navbar */}
       <aside>
         {/* <h1>aside</h1> */}
-        <div className="side-search-bar">
+        {/* <div className="side-search-bar">
           <div>
             <p>Looking for: </p>
             {/* <CiLocationOn className="inputIcon" /> */}
-            <input
+        {/* <input
               type="text"
               id="locationnn"
               placeholder="type preferred location"
@@ -43,15 +31,13 @@ function SideNav({ toggle }) {
           </div>
           <div>
             <p>Price range:</p>
-            {/* <GiPriceTag className="inputIcon" /> */}
             <input type="text" id="pricee" placeholder="e.g 100 - 500,000" />
           </div>{" "}
           <div>
             <p>Type: </p>
-            {/* <MdOutlineTypeSpecimen className="inputIcon" /> */}
             <input type="text" id="typee" placeholder="e.g Self contain" />
           </div>
-        </div>
+        </div> */}
         {/* <BsSearch className="searchBtn" /> */}
         {/* side navbar */}
         <ul>
