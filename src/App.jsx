@@ -33,7 +33,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home toggle={toggle} />} />
           <Route path="/product" element={<Product toggle={toggle} />} />
           <Route path="/productDetails/:id" element={<Details />} />
           <Route path="/wishlist" element={<Wishlist />} />

@@ -4,7 +4,8 @@ import Agent from "./agent";
 import Landlord from "./landlord";
 import { useState } from "react";
 import { replace, useNavigate } from "react-router-dom";
-function Home() {
+import SideNav from "../sideNavBar";
+function Home({ toggle }) {
   let [displayTenant, setDisplayTenant] = useState(true);
   let [displayAgent, setDisplayAgent] = useState(false);
   let [displayLandlord, setDisplayLandlord] = useState(false);
@@ -76,6 +77,7 @@ function Home() {
 
   return (
     <>
+      {toggle && <SideNav />}
       <section className="hero">
         <div className="hero_div">
           <button onClick={handleTenantClick}>Tenant</button>

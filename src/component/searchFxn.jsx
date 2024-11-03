@@ -9,6 +9,8 @@ import { BsSearch } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
 import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineTypeSpecimen } from "react-icons/md";
+import { FiFilter } from "react-icons/fi";
+import { AiOutlineClose } from "react-icons/ai";
 const SearchFxn = () => {
   const route = useNavigate();
   const [searchErr, setSearchErr] = useState({});
@@ -17,6 +19,7 @@ const SearchFxn = () => {
     type: "",
     price: "",
     location: "",
+    locationn: "",
   });
 
   const handleChange = (e) => {
@@ -24,8 +27,9 @@ const SearchFxn = () => {
     setSearchInput({ ...searchInput, [e.target.name]: value });
   };
   const newErr = {};
+  let searchResult = "";
+
   const handleValidation = () => {
-    let searchResult = "";
     // FILTERING FOR LOCATION, TYPE, AND PRICE
     if (
       searchInput.location !== "" &&
@@ -95,12 +99,6 @@ const SearchFxn = () => {
     } else {
       searchResult = "";
     }
-    // searchResult = apartments.filter(
-    //   (item) =>
-    //     item.type == searchInput.type.toLowerCase() ||
-    //     item.price == searchInput.price ||
-    //     item.state.toLocaleLowerCase() == searchInput.location.toLowerCase()
-    // );
     console.log(searchResult);
     localStorage.setItem("searchResult", JSON.stringify(searchResult));
   };
@@ -110,70 +108,107 @@ const SearchFxn = () => {
     //   return;
     // }
   };
+
+  // implement search functionalities
+  const search = () => {
+    searchResult = apartments.filter(
+      (apartments) =>
+        apartments.state.toLowerCase() == searchInput.locationn.toLowerCase()
+    );
+    localStorage.setItem("searchResult", JSON.stringify(searchResult));
+    console.log(searchResult);
+  };
+
+  // to toggle the filter search bar
+  const [toggle, setToggle] = useState(false);
+  const toggleFilterIcon = () => {
+    setToggle(!toggle);
+    console.log("hi");
+  };
+
+  // getting the search results from the local storage
   let searchResultt = "";
   searchResultt = localStorage.getItem("searchResult")
     ? JSON.parse(localStorage.getItem("searchResult"))
     : [];
   handleValidation();
-  // implement search functionalities
-  const search = () => {};
   return (
     <>
-      <form
-        className="searchContainer"
-        action=""
-        onSubmit={(event) => {
-          event.preventDefault();
-          handleSubmit();
-        }}
-      >
-        <div>
-          <p>Looking for </p>
-          <div>
-            <CiLocationOn className="inputIcon" />
-            <input
-              onChange={handleChange}
-              value={searchInput.location}
-              name="location"
-              type="text"
-              id="location"
-              placeholder="type preferred location"
-            />
-          </div>
-        </div>
-        <div>
-          <p>Price range</p>
-          <div>
-            {/* <label htmlFor="location">Price range:</label> */}
-            <GiPriceTag className="inputIcon" />
-            <input
-              onChange={handleChange}
-              value={searchInput.price}
-              name="price"
-              type="text"
-              id="price"
-              placeholder="e.g 100 - 500,000"
-            />
-          </div>
-        </div>{" "}
-        <div>
-          <p>Type </p>
-          <div>
-            <MdOutlineTypeSpecimen className="inputIcon" />
-            <input
-              onChange={handleChange}
-              value={searchInput.type}
-              name="type"
-              type="text"
-              id="type"
-              placeholder="e.g Self contain"
-            />
-          </div>
-        </div>
-        <button className="searchBtn" type="submit">
-          <BsSearch />
+      <div className="searchbar">
+        <input
+          onChange={handleChange}
+          value={searchInput.locationn}
+          name="locationn"
+          type="text"
+          id="location"
+          placeholder="type preferred location"
+        />
+        <button onClick={search} className="search">
+          search
         </button>
-      </form>
+        <button onClick={toggleFilterIcon} className="filter">
+          {" "}
+          {!toggle ? <FiFilter /> : <AiOutlineClose />}
+        </button>
+      </div>
+      {toggle ? (
+        <form
+          // toggle={toggle}
+          className="searchContainer"
+          action=""
+          onSubmit={(event) => {
+            event.preventDefault();
+            handleSubmit();
+          }}
+        >
+          <div>
+            <p>Looking for </p>
+            <div>
+              <CiLocationOn className="inputIcon" />
+              <input
+                onChange={handleChange}
+                value={searchInput.location}
+                name="location"
+                type="text"
+                id="location"
+                placeholder="type preferred location"
+              />
+            </div>
+          </div>
+          <div>
+            <p>Price range</p>
+            <div>
+              {/* <label htmlFor="location">Price range:</label> */}
+              <GiPriceTag className="inputIcon" />
+              <input
+                onChange={handleChange}
+                value={searchInput.price}
+                name="price"
+                type="text"
+                id="price"
+                placeholder="e.g 100 - 500,000"
+              />
+            </div>
+          </div>{" "}
+          <div>
+            <p>Type </p>
+            <div>
+              <MdOutlineTypeSpecimen className="inputIcon" />
+              <input
+                onChange={handleChange}
+                value={searchInput.type}
+                name="type"
+                type="text"
+                id="type"
+                placeholder="e.g Self contain"
+              />
+            </div>
+          </div>
+          {/* <button className="searchBtn" type="submit">
+          <BsSearch />
+        </button> */}
+        </form>
+      ) : null}
       {searchResultt && <p>Result: {searchResultt.length} apartments</p>}
 
       <div className="productsContainer">

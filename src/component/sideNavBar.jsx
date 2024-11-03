@@ -53,6 +53,17 @@ function SideNav({ toggle }) {
             </NavLink>
           </li>
           <li>
+            <NavLink
+              className={"nav-item"}
+              to={"/product"}
+              style={({ isActive }) =>
+                isActive ? { color: "red" } : undefined
+              }
+            >
+              Product
+            </NavLink>
+          </li>
+          <li>
             <select name="categories" id="cati" className={"nav-item"}>
               <option value="null">Category</option>
 
