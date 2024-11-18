@@ -37,21 +37,20 @@ const Wishlist = () => {
               <>
                 <div id="productDetails">
                   {wishList.map((item) => (
-                    <div id="aboutItem" key={item.gallery[2]}>
+                    <div id="aboutItem" key={item.id}>
                       <div
                         className="product"
                         onClick={() => {
                           route(`/productDetails/${item.id}`);
                         }}
                       >
-                        <img src={item.gallery[2]} alt="" />
+                        <img src={item.images[0]} alt="" />
                       </div>
                       <div className="about">
-                        <div className="desc"></div>
-                        <p>
-                          price per item: ${item.rooms[0].price_per_night}
-                          ,000
-                        </p>
+                        <p className="desc">{item.typeOfApartment}</p>
+
+                        <p className="desc">{item.location}</p>
+                        <p>price per item: ${item.price}</p>
                         {/* <p className="colour">colour:{item.color[0]}</p> */}
                         <span className="list">Add note</span>
                       </div>

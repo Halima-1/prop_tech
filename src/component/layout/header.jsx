@@ -6,7 +6,7 @@ import { BiLogOut, BiMenuAltRight } from "react-icons/bi";
 import { PiHamburgerLight } from "react-icons/pi";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineCloseSquare } from "react-icons/ai";
-function Header({ onToggle, toggle }) {
+function Header({ loading, onToggle, toggle }) {
   const navigate = useNavigate();
   // const [toggle, setToggle] = useState();
   const logout = () => {
@@ -17,7 +17,7 @@ function Header({ onToggle, toggle }) {
 
   return (
     <>
-      <header>
+      <header onLoad={loading}>
         <nav>
           <h2 className="nav-brand">
             <span>mybrela</span>
@@ -47,6 +47,11 @@ function Header({ onToggle, toggle }) {
               <NavLink
                 className={"nav-item"}
                 to={"/product"}
+                // onClick={
+                //   localStorage.getItem("user")
+                //     ? navigate("/product")
+                //     : navigate("/login", { replace: true })
+                // }
                 style={({ isActive }) =>
                   isActive ? { color: "red" } : undefined
                 }

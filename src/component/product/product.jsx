@@ -4,14 +4,28 @@ import { useState, useEffect } from "react";
 import { BiHeart } from "react-icons/bi";
 
 import { useNavigate } from "react-router-dom";
-import SideNav from "./sideNavBar";
-import apartments from "./apartments";
+import SideNav from "../layout/sideNavBar";
+import apartments from "../apartments";
 import SearchFxn from "./searchFxn";
-
+import Latest from "./latest";
+import Promo from "./promo";
 const Product = ({ toggle }) => {
-  // const [product, setProduct] = useState();
   const route = useNavigate();
   console.log(apartments);
+
+  // media query with javascript
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Function to update state with current screen width
+    const handleResize = () => setScreenWidth(window.innerWidth);
+
+    // Set up event listener on resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up event listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   // UPDATING USER'S DETAILS AND WISHLIST
   const user = JSON.parse(localStorage.getItem("user")) || [];
@@ -42,15 +56,68 @@ const Product = ({ toggle }) => {
     localStorage.setItem("user", JSON.stringify(user));
     localStorage.setItem("users", JSON.stringify(allUsers));
   };
+  // TOGGLE SPECIAL LISTINGS AND ADD & REMOVE CLASSNAME
+  const latest = apartments.filter((item) => item.id > apartments.length - 5);
+
+  const [toggleLatestListing, setToggleLatestListing] = useState(false);
+  const latestListing = () => {
+    setToggleLatestListing(!toggleLatestListing);
+    console.log(toggleListing);
+    if (!toggleLatestListing) {
+      document.getElementById("latest").style.backgroundImage = "none";
+      document.getElementById("latest").classList.add("close");
+      document.getElementById("latest").classList.remove("cover");
+    } else {
+      document.getElementById(
+        "latest"
+      ).style.backgroundImage = `url(${latest[0].images[0]})`;
+      document.getElementById("latest").classList.remove("close");
+      document.getElementById("latest").classList.add("cover");
+    }
+  };
+
+  // discountListing
+  const [toggleListing, setToggleListing] = useState(false);
+  const promo = apartments.filter((item) => item.type == "flat");
+
+  const discountListing = () => {
+    setToggleListing(!toggleListing);
+    console.log(toggleListing);
+    if (!toggleListing) {
+      document.getElementById("promo").style.backgroundImage = "none";
+      document.getElementById("promo").classList.add("close");
+      document.getElementById("promo").classList.remove("cover");
+    } else {
+      document.getElementById(
+        "promo"
+      ).style.backgroundImage = `url(${promo[0].images[0]})`;
+      document.getElementById("promo").classList.remove("close");
+      document.getElementById("promo").classList.add("cover");
+    }
+  };
 
   return (
     <>
       {/* <SideNav /> */}
       {toggle && <SideNav />}
-      <SearchFxn />
+      <SearchFxn screenWidth={screenWidth} />
+      <div className="listing-container">
+        <Latest
+          toggleLatestListing={toggleLatestListing}
+          screenWidth={screenWidth}
+          latestListing={latestListing}
+        />
+        <Promo
+          screenWidth={screenWidth}
+          toggleListing={toggleListing}
+          discountListing={discountListing}
+        />
+      </div>
+      <h2>Available Apartments</h2>
+
       <section className="productsContainer">
         {apartments
-          ? apartments.slice(0, 40).map((product, index) => (
+          ? apartments.map((product, index) => (
               <div
                 onMouseEnter={() => {
                   const productIcon = document.getElementById(
@@ -84,7 +151,7 @@ const Product = ({ toggle }) => {
 
                 <p
                   onClick={() => {
-                    route(`/productDetails/${product.id}`);
+                    route(`../productDetails/${product.id}`);
                   }}
                   className="productElement hideProductIcons"
                   id={`product-icons${product.id}`}

@@ -161,3 +161,43 @@
 
 
 }
+
+.listingForm{
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    border-top: 3px solid rgb(202, 199, 199);
+    border-bottom: 3px solid gray;
+
+    border-radius: 10px;
+    margin-bottom: 30px;
+    border-left: 1px dashed grey;
+    border-right: 1px dashed grey;
+
+    input{
+        width: 90%;
+        padding: 7px;
+        outline: none;
+        border: none;
+        border-radius: 7px;
+        margin-top: 10px;
+        background-color: azure;
+        //  margin: auto;
+    }
+    textarea{
+        width: 90%;
+        padding: 4px 7px;
+        outline: none;
+                 margin:10px auto;
+                 height: 160px;
+
+    }
+    .listingBtn{
+        width: 40%;
+        background-color: $bg3;
+        color: $text-color3;
+        font-size: 18px;
+    }
+}

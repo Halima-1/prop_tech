@@ -8,14 +8,20 @@ import Home from "./component/home/landing";
 import Login from "./component/form/login";
 import Register from "./component/form/register";
 import Landlord from "./component/home/landlord";
-import Product from "./component/product";
+import Product from "./component/product/product";
 import Details from "./component/productDetails/productDetails";
 import Wishlist from "./component/wishlist/wishlist";
-import SideNav from "./component/sideNavBar";
+// import SideNav from "./component/sideNavBar";
 function App() {
-  const [toggle, setToggle] = useState(false);
-  // const [toggleOff, setToggleOff] = useState(true);
+  const [isloaded, setIsLoaded] = useState(false);
 
+  const [toggle, setToggle] = useState(false);
+  // onload(setToggle(toggle));
+  // const [toggleOff, setToggleOff] = useState(true);
+  const load = () => {
+    setToggle(!toggle);
+    console.log(toggle, "loaded");
+  };
   const toggleSidebar = () => {
     setToggle(!toggle);
     console.log("hi");
@@ -23,7 +29,7 @@ function App() {
   function Layout() {
     return (
       <>
-        <Header onToggle={toggleSidebar} toggle={toggle} />
+        <Header loading={load} onToggle={toggleSidebar} toggle={toggle} />
         <Outlet />
         <Footer />
       </>

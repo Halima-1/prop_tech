@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 // import SideNav from "./sideNavBar";
-import apartments from "./apartments";
+import apartments from "../apartments";
 import "./product.scss";
 import React from "react";
 import { useState, useEffect } from "react";
@@ -11,7 +11,7 @@ import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineTypeSpecimen } from "react-icons/md";
 import { FiFilter } from "react-icons/fi";
 import { AiOutlineClose } from "react-icons/ai";
-const SearchFxn = () => {
+const SearchFxn = ({ onHandleResize, screenWidth }) => {
   const route = useNavigate();
   const [searchErr, setSearchErr] = useState({});
 
@@ -120,7 +120,7 @@ const SearchFxn = () => {
   };
 
   // to toggle the filter search bar
-  const [toggle, setToggle] = useState(false);
+  let [toggle, setToggle] = useState(false);
   const toggleFilterIcon = () => {
     setToggle(!toggle);
     console.log("hi");
@@ -132,6 +132,7 @@ const SearchFxn = () => {
     ? JSON.parse(localStorage.getItem("searchResult"))
     : [];
   handleValidation();
+
   return (
     <>
       <div className="searchbar">
@@ -148,9 +149,16 @@ const SearchFxn = () => {
         </button>
         <button onClick={toggleFilterIcon} className="filter">
           {" "}
-          {!toggle ? <FiFilter /> : <AiOutlineClose />}
+          {screenWidth >= 600 ? (
+            (toggle = true)
+          ) : !toggle ? (
+            <FiFilter />
+          ) : (
+            <AiOutlineClose />
+          )}
         </button>
       </div>
+
       {toggle ? (
         <form
           // toggle={toggle}
@@ -209,7 +217,9 @@ const SearchFxn = () => {
         </button> */}
         </form>
       ) : null}
-      {searchResultt && <p>Result: {searchResultt.length} apartments</p>}
+      {searchResultt.length > 0 ? (
+        <p>Result: {searchResultt.length} apartments</p>
+      ) : null}
 
       <div className="productsContainer">
         {searchResultt

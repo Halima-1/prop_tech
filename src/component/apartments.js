@@ -478,517 +478,571 @@ const apartments = [
         // "house30_img6.jpg"
       ]
     },
-    {
-      id: 31,
-      state: "Oyo",
-      location: "No. 25 Mokola Hill, Ibadan, Oyo",
-      price: 320000,
-      typeOfApartment: "1 Bedroom Self-Contained",
-      images: [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "house31_img6.jpg"
-      ]
-    },
-    {
-      id: 32,
-      state: "Lagos",
-      location: "No. 11 Ikoyi Crescent, Lagos",
-      price: 1900000,
-      typeOfApartment: "4 Bedroom Duplex",
-      images: [
-        "",
-        "",
-        "",
-        "https://media.istockphoto.com/id/1498629265/photo/side-view-of-retro-anthracite-stainless-steel-and-marble-kitchen-with-old-fashioned-windows.jpg?s=612x612&w=0&k=20&c=rj7Vi5W8EsHzF84On-nB4MJFoe72UDp-782btEbTY6Q=",
-        "",
-        "house32_img6.jpg"
-      ]
-    },
-    {
-        id: 33,
-        state: "Oyo",
-        location: "No. 32 Aleshinloye Road, Ibadan, Oyo",
-        price: 380000,
-        typeOfApartment: "3 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house33_img6.jpg"
-        ]
-      },
-      {
-        id: 34,
-        state: "Lagos",
-        location: "No. 15 Akerele Street, Surulere, Lagos",
-        price: 850000,
-        typeOfApartment: "2 Bedroom Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house34_img6.jpg"
-        ]
-      },
-      {
-        id: 35,
-        state: "Oyo",
-        location: "No. 10 Orita Challenge, Ibadan, Oyo",
-        price: 420000,
-        typeOfApartment: "1 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house35_img6.jpg"
-        ]
-      },
-      {
-        id: 36,
-        state: "Lagos",
-        location: "No. 8 GRA, Ikeja, Lagos",
-        price: 1500000,
-        typeOfApartment: "4 Bedroom Mansion",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house36_img6.jpg"
-        ]
-      },
-      {
-        id: 37,
-        state: "Oyo",
-        location: "No. 5 University Road, Ibadan, Oyo",
-        price: 550000,
-        typeOfApartment: "3 Bedroom Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house37_img6.jpg"
-        ]
-      },
-      {
-        id: 38,
-        state: "Lagos",
-        location: "No. 12 Lekki Coastal Road, Lekki, Lagos",
-        price: 1800000,
-        typeOfApartment: "Luxury Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house38_img6.jpg"
-        ]
-      },
-      {
-        id: 39,
-        state: "Oyo",
-        location: "No. 25 Jericho, Ibadan, Oyo",
-        price: 340000,
-        typeOfApartment: "2 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house39_img6.jpg"
-        ]
-      },
-      {
-        id: 40,
-        state: "Lagos",
-        location: "No. 3 Victoria Island, Lagos",
-        price: 1200000,
-        typeOfApartment: "3 Bedroom Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house40_img6.jpg"
-        ]
-      },
-      {
-        id: 41,
-        state: "Oyo",
-        location: "No. 19 Oluyole Estate, Ibadan, Oyo",
-        price: 400000,
-        typeOfApartment: "3 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house41_img6.jpg"
-        ]
-      },
-      {
-        id: 42,
-        state: "Lagos",
-        location: "No. 16 Ogundana Street, Ikeja, Lagos",
-        price: 950000,
-        typeOfApartment: "2 Bedroom Bungalow",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house42_img6.jpg"
-        ]
-      },
-      {
-        id: 43,
-        state: "Oyo",
-        location: "No. 30 Old Bodija Estate, Ibadan, Oyo",
-        price: 375000,
-        typeOfApartment: "2 Bedroom Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house43_img6.jpg"
-        ]
-      },
-      {
-        id: 44,
-        state: "Lagos",
-        location: "No. 4 Saka Tinubu Street, VI, Lagos",
-        price: 1700000,
-        typeOfApartment: "5 Bedroom Mansion",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house44_img6.jpg"
-        ]
-      },
-      {
-        id: 45,
-        state: "Oyo",
-        location: "No. 28 Sango-Ojoo Road, Ibadan, Oyo",
-        price: 440000,
-        typeOfApartment: "3 Bedroom Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house45_img6.jpg"
-        ]
-      },
-      {
-        id: 46,
-        state: "Lagos",
-        location: "No. 22 Niyi Okunola Street, Ikeja, Lagos",
-        price: 1300000,
-        typeOfApartment: "4 Bedroom Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house46_img6.jpg"
-        ]
-      },
-      {
-        id: 47,
-        state: "Oyo",
-        location: "No. 12 Akala Expressway, Ibadan, Oyo",
-        price: 360000,
-        typeOfApartment: "2 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house47_img6.jpg"
-        ]
-      },
-      {
-        id: 48,
-        state: "Lagos",
-        location: "No. 30 Lagos Road, Ikeja, Lagos",
-        price: 1600000,
-        typeOfApartment: "Luxury Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house48_img6.jpg"
-        ]
-      },
-      {
-        id: 49,
-        state: "Oyo",
-        location: "No. 4 Old Bodija, Ibadan, Oyo",
-        price: 310000,
-        typeOfApartment: "1 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house49_img6.jpg"
-        ]
-      },
-      {
-        id: 50,
-        state: "Lagos",
-        location: "No. 7 Ogunlana Drive, Surulere, Lagos",
-        price: 1250000,
-        typeOfApartment: "4 Bedroom Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house50_img6.jpg"
-        ]
-      },
-      {
-        id: 51,
-        state: "Oyo",
-        location: "No. 8 Alalubosa, Ibadan, Oyo",
-        price: 390000,
-        typeOfApartment: "2 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house51_img6.jpg"
-        ]
-      },
-      {
-        id: 52,
-        state: "Lagos",
-        location: "No. 45 Maryland, Ikeja, Lagos",
-        price: 1150000,
-        typeOfApartment: "3 Bedroom Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house52_img6.jpg"
-        ]
-      },
-      {
-        id: 53,
-        state: "Oyo",
-        location: "No. 21 Awolowo Avenue, Ibadan, Oyo",
-        price: 470000,
-        typeOfApartment: "1 Bedroom Self-Contained",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house53_img6.jpg"
-        ]
-      },
-      {
-        id: 54,
-        state: "Lagos",
-        location: "No. 19 Saka Tinubu Street, Victoria Island, Lagos",
-        price: 1950000,
-        typeOfApartment: "Luxury Penthouse",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house54_img6.jpg"
-        ]
-      },
-      {
-        id: 55,
-        state: "Oyo",
-        location: "No. 3 Iwo Road, Ibadan, Oyo",
-        price: 280000,
-        typeOfApartment: "3 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house55_img6.jpg"
-        ]
-      },
-      {
-        id: 56,
-        state: "Lagos",
-        location: "No. 10 Lekki Free Trade Zone, Lekki, Lagos",
-        price: 1650000,
-        typeOfApartment: "4 Bedroom Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house56_img6.jpg"
-        ]
-      },
-      {
-        id: 57,
-        state: "Oyo",
-        location: "No. 2 Aleshinloye, Ibadan, Oyo",
-        price: 360000,
-        typeOfApartment: "1 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house57_img6.jpg"
-        ]
-      },
-      {
-        id: 58,
-        state: "Lagos",
-        location: "No. 20 Bode Thomas, Surulere, Lagos",
-        price: 800000,
-        typeOfApartment: "2 Bedroom Bungalow",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house58_img6.jpg"
-        ]
-      },
-      {
-        id: 59,
-        state: "Oyo",
-        location: "No. 7 Ogunyinka Street, Ibadan, Oyo",
-        price: 420000,
-        typeOfApartment: "3 Bedroom Duplex",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house59_img6.jpg"
-        ]
-      },
-      {
-        id: 60,
-        state: "Lagos",
-        location: "No. 14 Bagauda Kaltho Street, Victoria Island, Lagos",
-        price: 1450000,
-        typeOfApartment: "Luxury Apartment",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house60_img6.jpg"
-        ]
-      },
-      {
-        id: 61,
-        state: "Oyo",
-        location: "No. 8 Oluyole Estate, Ibadan, Oyo",
-        price: 375000,
-        typeOfApartment: "2 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house61_img6.jpg"
-        ]
-      },
-      {
-        id: 62,
-        state: "Lagos",
-        location: "No. 9 Adeola Odeku Street, Victoria Island, Lagos",
-        price: 2000000,
-        typeOfApartment: "5 Bedroom Mansion",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house62_img6.jpg"
-        ]
-      },
-      {
-        id: 63,
-        state: "Oyo",
-        location: "No. 45 Agodi Gate, Ibadan, Oyo",
-        price: 500000,
-        typeOfApartment: "3 Bedroom Flat",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house119_img6.jpg"
-        ]
-      },
-      {
-        id: 64,
-        state: "Lagos",
-        location: "No. 9 Marina Road, Lagos Island, Lagos",
-        price: 1750000,
-        typeOfApartment: "Luxury Mansion",
-        type:"luxury",
-        images: [
-          "",
-          "",
-          "",
-          "",
-          "",
-          "house120_img6.jpg"
-        ]
-      }
+    // {
+    //   id: 31,
+    //   state: "Oyo",
+    //   location: "No. 25 Mokola Hill, Ibadan, Oyo",
+    //   price: 320000,
+    //   typeOfApartment: "1 Bedroom Self-Contained",
+    //   images: [
+    //     "",
+    //     "",
+    //     "",
+    //     "",
+    //     "",
+    //     "house31_img6.jpg"
+    //   ]
+    // },
+    // {
+    //   id: 32,
+    //   state: "Lagos",
+    //   location: "No. 11 Ikoyi Crescent, Lagos",
+    //   price: 1900000,
+    //   typeOfApartment: "4 Bedroom Duplex",
+    //   images: [
+    //     "",
+    //     "",
+    //     "",
+    //     "https://media.istockphoto.com/id/1498629265/photo/side-view-of-retro-anthracite-stainless-steel-and-marble-kitchen-with-old-fashioned-windows.jpg?s=612x612&w=0&k=20&c=rj7Vi5W8EsHzF84On-nB4MJFoe72UDp-782btEbTY6Q=",
+    //     "",
+    //     "house32_img6.jpg"
+    //   ]
+    // },
+    // {
+    //     id: 33,
+    //     state: "Oyo",
+    //     location: "No. 32 Aleshinloye Road, Ibadan, Oyo",
+    //     price: 380000,
+    //     typeOfApartment: "3 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house33_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 34,
+    //     state: "Lagos",
+    //     location: "No. 15 Akerele Street, Surulere, Lagos",
+    //     price: 850000,
+    //     typeOfApartment: "2 Bedroom Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house34_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 35,
+    //     state: "Oyo",
+    //     location: "No. 10 Orita Challenge, Ibadan, Oyo",
+    //     price: 420000,
+    //     typeOfApartment: "1 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house35_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 36,
+    //     state: "Lagos",
+    //     location: "No. 8 GRA, Ikeja, Lagos",
+    //     price: 1500000,
+    //     typeOfApartment: "4 Bedroom Mansion",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house36_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 37,
+    //     state: "Oyo",
+    //     location: "No. 5 University Road, Ibadan, Oyo",
+    //     price: 550000,
+    //     typeOfApartment: "3 Bedroom Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house37_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 38,
+    //     state: "Lagos",
+    //     location: "No. 12 Lekki Coastal Road, Lekki, Lagos",
+    //     price: 1800000,
+    //     typeOfApartment: "Luxury Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house38_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 39,
+    //     state: "Oyo",
+    //     location: "No. 25 Jericho, Ibadan, Oyo",
+    //     price: 340000,
+    //     typeOfApartment: "2 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house39_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 40,
+    //     state: "Lagos",
+    //     location: "No. 3 Victoria Island, Lagos",
+    //     price: 1200000,
+    //     typeOfApartment: "3 Bedroom Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house40_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 41,
+    //     state: "Oyo",
+    //     location: "No. 19 Oluyole Estate, Ibadan, Oyo",
+    //     price: 400000,
+    //     typeOfApartment: "3 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house41_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 42,
+    //     state: "Lagos",
+    //     location: "No. 16 Ogundana Street, Ikeja, Lagos",
+    //     price: 950000,
+    //     typeOfApartment: "2 Bedroom Bungalow",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house42_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 43,
+    //     state: "Oyo",
+    //     location: "No. 30 Old Bodija Estate, Ibadan, Oyo",
+    //     price: 375000,
+    //     typeOfApartment: "2 Bedroom Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house43_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 44,
+    //     state: "Lagos",
+    //     location: "No. 4 Saka Tinubu Street, VI, Lagos",
+    //     price: 1700000,
+    //     typeOfApartment: "5 Bedroom Mansion",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house44_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 45,
+    //     state: "Oyo",
+    //     location: "No. 28 Sango-Ojoo Road, Ibadan, Oyo",
+    //     price: 440000,
+    //     typeOfApartment: "3 Bedroom Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house45_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 46,
+    //     state: "Lagos",
+    //     location: "No. 22 Niyi Okunola Street, Ikeja, Lagos",
+    //     price: 1300000,
+    //     typeOfApartment: "4 Bedroom Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house46_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 47,
+    //     state: "Oyo",
+    //     location: "No. 12 Akala Expressway, Ibadan, Oyo",
+    //     price: 360000,
+    //     typeOfApartment: "2 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house47_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 48,
+    //     state: "Lagos",
+    //     location: "No. 30 Lagos Road, Ikeja, Lagos",
+    //     price: 1600000,
+    //     typeOfApartment: "Luxury Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house48_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 49,
+    //     state: "Oyo",
+    //     location: "No. 4 Old Bodija, Ibadan, Oyo",
+    //     price: 310000,
+    //     typeOfApartment: "1 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house49_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 50,
+    //     state: "Lagos",
+    //     location: "No. 7 Ogunlana Drive, Surulere, Lagos",
+    //     price: 1250000,
+    //     typeOfApartment: "4 Bedroom Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house50_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 51,
+    //     state: "Oyo",
+    //     location: "No. 8 Alalubosa, Ibadan, Oyo",
+    //     price: 390000,
+    //     typeOfApartment: "2 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house51_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 52,
+    //     state: "Lagos",
+    //     location: "No. 45 Maryland, Ikeja, Lagos",
+    //     price: 1150000,
+    //     typeOfApartment: "3 Bedroom Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house52_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 53,
+    //     state: "Oyo",
+    //     location: "No. 21 Awolowo Avenue, Ibadan, Oyo",
+    //     price: 470000,
+    //     typeOfApartment: "1 Bedroom Self-Contained",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house53_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 54,
+    //     state: "Lagos",
+    //     location: "No. 19 Saka Tinubu Street, Victoria Island, Lagos",
+    //     price: 1950000,
+    //     typeOfApartment: "Luxury Penthouse",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house54_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 55,
+    //     state: "Oyo",
+    //     location: "No. 3 Iwo Road, Ibadan, Oyo",
+    //     price: 280000,
+    //     typeOfApartment: "3 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house55_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 56,
+    //     state: "Lagos",
+    //     location: "No. 10 Lekki Free Trade Zone, Lekki, Lagos",
+    //     price: 1650000,
+    //     typeOfApartment: "4 Bedroom Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house56_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 57,
+    //     state: "Oyo",
+    //     location: "No. 2 Aleshinloye, Ibadan, Oyo",
+    //     price: 360000,
+    //     typeOfApartment: "1 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house57_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 58,
+    //     state: "Lagos",
+    //     location: "No. 20 Bode Thomas, Surulere, Lagos",
+    //     price: 800000,
+    //     typeOfApartment: "2 Bedroom Bungalow",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house58_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 59,
+    //     state: "Oyo",
+    //     location: "No. 7 Ogunyinka Street, Ibadan, Oyo",
+    //     price: 420000,
+    //     typeOfApartment: "3 Bedroom Duplex",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house59_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 60,
+    //     state: "Lagos",
+    //     location: "No. 14 Bagauda Kaltho Street, Victoria Island, Lagos",
+    //     price: 1450000,
+    //     typeOfApartment: "Luxury Apartment",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house60_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 61,
+    //     state: "Oyo",
+    //     location: "No. 8 Oluyole Estate, Ibadan, Oyo",
+    //     price: 375000,
+    //     typeOfApartment: "2 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house61_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 62,
+    //     state: "Lagos",
+    //     location: "No. 9 Adeola Odeku Street, Victoria Island, Lagos",
+    //     price: 2000000,
+    //     typeOfApartment: "5 Bedroom Mansion",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house62_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 63,
+    //     state: "Oyo",
+    //     location: "No. 45 Agodi Gate, Ibadan, Oyo",
+    //     price: 500000,
+    //     typeOfApartment: "3 Bedroom Flat",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house119_img6.jpg"
+    //     ]
+    //   },
+    //   {
+    //     id: 64,
+    //     state: "Lagos",
+    //     location: "No. 9 Marina Road, Lagos Island, Lagos",
+    //     price: 1750000,
+    //     typeOfApartment: "Luxury Mansion",
+    //     type:"luxury",
+    //     images: [
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "",
+    //       "house120_img6.jpg"
+    //     ]
+    //   }
     ];
-
+    const landlordNames = [
+      'Mr. John Smith',
+      'Ms. Emma Johnson',
+      'Dr. Michael Williams',
+      'Mrs. Sophia Brown',
+      'Mr. James Jones',
+      'Ms. Olivia Garcia',
+      'Dr. David Miller',
+      'Mrs. Isabella Davis',
+      'Mr. Chris Martinez',
+      'Ms. Mia Lopez',
+      'Dr. Daniel Gonzalez',
+      'Mrs. Emily Wilson',
+      'Mr. Ethan Anderson',
+      'Ms. Charlotte Thomas',
+      'Dr. Liam Taylor',
+      'Mrs. Abigail Moore',
+      'Mr. Noah Jackson',
+      'Ms. Ella Martin',
+      'Dr. Mason Thompson',
+      'Mrs. Amelia White',
+      'Mr. Alexander Harris',
+      'Ms. Lily Lewis',
+      'Dr. Benjamin Young',
+      'Mrs. Zoe Hall',
+      'Mr. Jacob Walker',
+      'Ms. Grace Allen',
+      'Dr. Lucas King',
+      'Mrs. Aria Wright',
+      'Mr. Logan Scott',
+      'Ms. Hazel Adams',
+      'Dr. Caleb Baker',
+      'Mrs. Scarlett Perez',
+      'Mr. Henry Mitchell',
+      'Ms. Stella Roberts',
+      'Dr. Samuel Evans',
+      'Mrs. Ellie Carter',
+      'Mr. Owen Phillips',
+      'Ms. Violet Campbell',
+      'Dr. Jackson Parker',
+      'Mrs. Hannah Rivera',
+      'Mr. Jack Turner',
+      'Ms. Claire Morgan',
+      'Dr. William Cox',
+      'Mrs. Layla Reed',
+      'Mr. Aiden Cook',
+      'Ms. Nora Bailey',
+      'Dr. Wyatt Cooper',
+      'Mrs. Penelope Rogers',
+      'Mr. Sebastian Peterson',
+      'Ms. Audrey Flores',
+      'Dr. Levi Morales',
+    ];
+    
     export default apartments
+    export  {landlordNames}

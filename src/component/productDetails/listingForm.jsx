@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./productDetails.scss";
-
-const ListingForm = () => {
+import Details from "./productDetails";
+const ListingForm = ({ id }) => {
   const [formDataa, setFormDataa] = useState({
     name: "",
     email: "",
@@ -18,51 +18,58 @@ const ListingForm = () => {
   const newErr = {};
   const handleValidation = () => {
     if (formDataa.name == "") {
+      newErr.notify = "";
       newErr.name = "please input your fullname";
     } else if (formDataa.email == "") {
       newErr.email = "valid email is required";
-    } else if (formDataa.id == "") {
-      newErr.id = "enter the apartment ID";
+    } else if (formDataa.id == "" || formDataa.id !== id) {
+      newErr.id = "enter valid apartment ID";
     }
     setErrData(newErr);
   };
   const handleSubmit = () => {
     handleValidation();
-    if (errData) {
-      console.log("submitted");
-
-      const users = localStorage.getItem("users")
-        ? JSON.parse(localStorage.getItem("users"))
-        : [];
-      const user = users.filter((item) => item.email == formDataa.email);
-      console.log(user);
-      if (user.length !== 0) {
-        const legituser =
-          user[0].email == formDataa.email && user[0].fname == formDataa.name
-            ? true
-            : (newErr.notify = "invalid credential");
-      } else {
-        newErr.notify = "invalid credential, user does not exist";
-      }
+    if (!errData) {
+      console.log(errData);
       return;
     }
-    // else {
-    //   newErr.notify = "input necessary details to proceed";
-    //   console.log("invalid");
-    // }
-    // setErrData(newErr);
+    const users = localStorage.getItem("users")
+      ? JSON.parse(localStorage.getItem("users"))
+      : [];
+    const user = users.filter((item) => item.email == formDataa.email);
+    console.log(user);
+    if (user.length !== 0) {
+      // const legituser =
+      user[0].email == formDataa.email && user[0].fname == formDataa.name
+        ? (window.location.href = `/productDetails/${id}`)(
+            (newErr.notify = (
+              <span style={{ color: "green" }}>Sent successfully</span>
+            ))
+          )
+        : (newErr.notify = (
+            <span style={{ color: "red" }}>Invalid username</span>
+          ));
+    } else {
+      newErr.notify = (
+        <span style={{ color: "red" }}>
+          Invalid credential, user does not exist
+        </span>
+      );
+    }
+    return;
   };
-
   return (
     <>
       <form
+        className="listingForm"
         action=""
         onSubmit={(event) => {
           event.preventDefault();
           handleSubmit();
         }}
       >
-        {errData.notify && <p style={{ color: "red" }}>{errData.notify}</p>}
+        <strong style={{ marginBottom: 30 }}>Get in touch with us</strong>
+        {errData.notify && <div>{errData.notify}</div>}
 
         <input
           onChange={handleChange}
@@ -98,7 +105,7 @@ const ListingForm = () => {
           value={formDataa.text}
           placeholder="Enter your message here"
         ></textarea>
-        <input type="submit" value={"submit"} />
+        <input className="listingBtn" type="submit" value={"submit"} />
       </form>
     </>
   );

@@ -21,7 +21,12 @@ p{
     font-size: 14px;
 }
 header{
-    
+    width: 100%;
+
+    position: sticky;
+    top: 0;
+    // bottom:150px ;
+    z-index: 10;
 }
 .menuBtn{
     margin-top: 10px;
@@ -37,10 +42,10 @@ header{
    
 }
 nav{
-    background-color: $bg3;
+    background-color: $headerbg;
+    // backdrop-filter:(blur 0.5) ;
     padding:  20px;
-    // position: fixed;
-    top: 0;
+    
     width: 100%;
     display: flex;
     flex-direction: row;

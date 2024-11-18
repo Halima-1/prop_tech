@@ -5,7 +5,7 @@ import { BiHeart } from "react-icons/bi";
 import "./productDetails.scss";
 import ListingForm from "./listingForm.jsx";
 import { HiLocationMarker } from "react-icons/hi";
-
+import { landlordNames } from "../apartments.js";
 const Details = () => {
   const [displayValue, setDisplayValue] = useState(0);
   const params = useParams();
@@ -22,6 +22,7 @@ const Details = () => {
 
   const image = displayProduct[0].images;
   console.log(image);
+  const landlord = landlordNames[id];
 
   // const relatedProduct =product.filter(product => product.category == details[0].category)
   return (
@@ -47,22 +48,19 @@ const Details = () => {
                     <img
                       src={`${item}`}
                       alt={displayProduct[0].typeOfApartment}
-                      // style={{ width: 120, height: 120 }}
                       onClick={() => setDisplayValue(index)}
                     />
                   </div>
                 ))}
               </div>
-              {/* <div className="contain">
-              <p>{`${displayProduct[0].price},000`}</p>
-              <button>Add to cart</button>
-            </div> */}
             </>
           )}
         </div>
 
         <div className="overview">
-          <h2>.... residence in {displayProduct[0].location} state</h2>
+          <h4>
+            {landlord} residence in {displayProduct[0].location} state
+          </h4>
           <div>
             <p>State: {displayProduct[0].state}</p>
             <p>Country:Nigeria</p>
@@ -72,7 +70,7 @@ const Details = () => {
           </div>
         </div>
       </section>
-      <ListingForm />
+      <ListingForm id={id} />
     </>
   );
 };

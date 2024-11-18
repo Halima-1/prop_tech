@@ -4,7 +4,7 @@ import Agent from "./agent";
 import Landlord from "./landlord";
 import { useState } from "react";
 import { replace, useNavigate } from "react-router-dom";
-import SideNav from "../sideNavBar";
+import SideNav from "../layout/sideNavBar";
 function Home({ toggle }) {
   let [displayTenant, setDisplayTenant] = useState(true);
   let [displayAgent, setDisplayAgent] = useState(false);
