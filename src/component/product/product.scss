@@ -366,11 +366,23 @@ margin-top: 25px;
   border-radius: 8px ;
   color: white ;
   width: 70% ;
-  font-size: 18px ;
+  font-size: 14px ;
   margin:10px auto;
+
+  @media (min-width: 600px) {
+    font-size: 18px ;
+
+  }
 }    
 .productDetails{
   height: 100px;
+  font-size: 14px ;
+
+
+  @media (min-width: 600px) {
+    font-size: 18px ;
+
+  }
 }
     div{
         border-radius: 10px;
