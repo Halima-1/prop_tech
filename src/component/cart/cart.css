@@ -5,6 +5,10 @@
   margin: auto;
   padding: 20px;
 }
+b {
+  text-transform: none;
+  font-size: 18px;
+}
 .item {
   width: 90%;
   margin: auto;
@@ -19,28 +23,33 @@
   color: rgb(160, 156, 156);
   /* text-transform: capitalize; */
 }
-b {
+.item b {
   text-transform: none;
   font-size: 18px;
+  width: 50%;
 }
 #cartContainer {
-  width: 100%;
+  width: 90%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 0 auto;
+
+  
 }
+
 #apartmentsDetails{
 display: block;
-width: 70%  ;
+width: 95%  ;
 }
 .empty-cart{
-  width: 40%;
+  width: 80%;
   margin: auto;
   text-align: center;
 }
 #aboutItem {
-  width: 95%;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,6 +57,7 @@ width: 70%  ;
   margin-bottom: 20px;
   border-bottom: 2px solid rgb(209, 204, 204);
   padding-bottom: 12px;
+  gap: 25px;
   /* margin-right: 20px; */
   /* box-shadow: 10px 0px 0px 2px rgb(233, 230, 230); */
 }
@@ -63,7 +73,7 @@ width: 70%  ;
 .about {
   width: 67%;
   display: block;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 }
 .desc {
   width: 90%;
@@ -134,8 +144,8 @@ svg {
 }
 
 .toCheckout {
-  width: 29%;
-  /* margin-top: 20px; */
+  width: 90%;
+  margin-top: 20px;
 }
 .toGet {
   width: 100%;
@@ -148,6 +158,7 @@ svg {
   text-transform: none;
 }
 .toGet div {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -156,22 +167,19 @@ svg {
   padding: 0;
   border-radius: 9px;
   text-align: center;
+  height: 40px;
 }
 .toGet div p {
-  padding: 7px;
-  border-radius: 0 0 0 7px;
+  
+  width: 50%;
 
-  /* margin: 7px; */
 }
-/* .toGet div:hover{
-    padding: 0;
-} */
+
 .toGet div p:hover {
   background-color: red;
   color: white;
   width: 50%;
-  border-radius: 0 0 0 7px;
-  /* margin: 6px ; */
+  height: fit-content;
 }
 #details {
   width: 100%;
@@ -235,5 +243,99 @@ svg {
 }
 .coupon button {
   border: none;
+  color: red;
   background-color: white;
+  width: 70%;
+  margin-bottom: 20px;
+
+}
+.coupon svg{
+  margin-top: 5px;
+}
+
+@media (min-width: 700px) {
+ x #cartContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  
+    
+  }
+
+  #apartmentsDetails{
+    display: block;
+    width: 70%  ;
+    }
+    .empty-cart{
+      width: 40%;
+      margin: auto;
+      text-align: center;
+    }
+    #aboutItem {
+      width: 95%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgb(209, 204, 204);
+      padding-bottom: 12px;
+      /* margin-right: 20px; */
+      /* box-shadow: 10px 0px 0px 2px rgb(233, 230, 230); */
+    }
+    .apartments {
+      width: 140px;
+      /* margin-right: 20px; */
+    }
+    .apartments img {
+      width: 100%;
+      height: 140px;
+      border-radius: 20px;
+    }
+    .about {
+      width: 67%;
+      display: block;
+      margin-top: 10px;
+    }
+    .desc {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .toCheckout {
+      width: 29%;
+      /* margin-top: 20px; */
+    }
+    .toGet {
+      width: 100%;
+      padding: 10px;
+      border-radius: 7px;
+      box-shadow: 1px 2px 1px 2px rgb(233, 230, 230);
+    }
+    .toGet p b {
+      font-size: 16px;
+      text-transform: none;
+    }
+    .toGet div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 14px;
+      border: 1px solid red;
+      padding: 0;
+      border-radius: 9px;
+      text-align: center;
+    }
+    .toGet div p {
+      padding: 7px;
+      border-radius: 0 0 0 7px;
+    
+      /* margin: 7px; */
+    }
 }
