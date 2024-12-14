@@ -132,7 +132,7 @@ const SearchFxn = ({ onHandleResize, screenWidth }) => {
     ? JSON.parse(localStorage.getItem("searchResult"))
     : [];
   handleValidation();
-
+  // search();
   return (
     <>
       <div className="searchbar">

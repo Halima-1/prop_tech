@@ -53,7 +53,6 @@
       
     }
     }
-    
     .searchBtn{
       cursor: pointer;
       margin-top: 45px;
@@ -360,6 +359,17 @@
   &_div{
 // width: 50%;
 margin-top: 25px;
+
+.add-to-cart{
+  background-color: rgb(29, 51, 29) ;
+  padding:5px 8px ;
+  border: none;
+  border-radius: 8px ;
+  color: white ;
+  width: 70% ;
+  font-size: 18px ;
+  margin:10px auto;
+}    
     div{
         border-radius: 10px;
         width: 90%;
@@ -402,6 +412,8 @@ margin-top: 25px;
     // width: max-content;
     padding: 5px 0;
     margin: auto;
+
+    
   }
   .hideProductIcons{
     display: none;
@@ -445,28 +457,64 @@ margin-top: 25px;
 
   }
   .listing-container{
-    width: 80%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px;
+    width: 96%;
+    @include flex;
+    // display: grid;
+    // grid-template-columns: repeat(3,1fr);
+    gap: 10px;
     margin: auto;
+    flex-wrap: wrap;
+    
+  
+    section{
+        border-radius: 10px;
+      .cover{
+        // width: 48%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 100px;
+        align-items: center;
+        margin-top: 30px;
+        width: 110px;
+        border-radius: 10px;
+        p{
+          background-color: rgba(0, 0, 0,0.5);
+          height: 100%;
+          align-content: center;
+          text-align: center;
+          color: white ;
+          font-size: 14px;
+        }
+      
+        @media (min-width: 768px) {
+          height: 170px;
+      
+          p{
+            font-size: 16px;
+          }
+      
+        }
+      }
+    }
   }
-.cover{
-  // width: 48%;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 170px;
-  align-items: center;
-  margin-top: 30px;
-  p{
-    background-color: rgba(0, 0, 0,0.5);
-    height: 100%;
-    align-content: center;
+  h3{
+    margin:20px auto;
+    font-size: 14px;
     text-align: center;
-    color: white ;
-  }
+    @media (min-width: 768px) {
+      font-size: 16px;
+  
+    }
+  
 }
 .close{
   background-image: none;
   height: max-content;
+}
+
+.listing{
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }

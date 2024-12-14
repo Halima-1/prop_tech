@@ -47,6 +47,17 @@ function SideNav({ loading, toggle }) {
           <li>
             <NavLink
               className={"nav-item"}
+              to={"/cart"}
+              style={({ isActive }) =>
+                isActive ? { color: "red" } : undefined
+              }
+            >
+              Cart
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              className={"nav-item"}
               to={"/wishlist"}
               style={({ isActive }) =>
                 isActive ? { color: "red" } : undefined

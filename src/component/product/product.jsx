@@ -9,9 +9,33 @@ import apartments from "../apartments";
 import SearchFxn from "./searchFxn";
 import Latest from "./latest";
 import Promo from "./promo";
+import Luxury from "./luxury";
 const Product = ({ toggle }) => {
   const route = useNavigate();
   console.log(apartments);
+  // ADD TO CART FUNCTION
+  const handleAddToCart = (apartments) => {
+    // const userCart = user[0].cart || [];
+    const userCart = localStorage.getItem("user-cart")
+      ? JSON.parse(localStorage.getItem("user-cart"))
+      : [];
+    const checkCart = userCart.find((item) => item.id === apartments.id);
+    if (checkCart) {
+      console.log(checkCart);
+      checkCart.quantity = checkCart.quantity + 1;
+      console.log(" item exist");
+    } else {
+      userCart.unshift({ ...apartments, quantity: 1 });
+      // setCart([...cart, product]);
+      console.log("no existing item");
+      localStorage.setItem("user-cart", JSON.stringify(userCart));
+      console.log(userCart);
+    }
+
+    // To update each user's cart
+    console.log(userCart);
+    updateUser.cart = userCart;
+  };
 
   // media query with javascript
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -20,17 +44,15 @@ const Product = ({ toggle }) => {
     // Function to update state with current screen width
     const handleResize = () => setScreenWidth(window.innerWidth);
 
-    // Set up event listener on resize
     window.addEventListener("resize", handleResize);
 
-    // Clean up event listener on component unmount
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   // UPDATING USER'S DETAILS AND WISHLIST
   const user = JSON.parse(localStorage.getItem("user")) || [];
-  const allUsers = JSON.parse(localStorage.getItem("users"));
-  const updateUser = allUsers.find((item) => item.email == user[0].email);
+  const allUsers = JSON.parse(localStorage.getItem("users")) || [];
+  const updateUser = allUsers.find((item) => item.email == user[0].email) || {};
   console.log(user);
 
   // ADDING ITEM TO WISHLIST
@@ -96,11 +118,31 @@ const Product = ({ toggle }) => {
     }
   };
 
+  // LUXURY LISTING
+  // discountListing
+  const [toggleLuxuryListing, setToggleLuxuryListing] = useState(false);
+  const luxury = apartments.filter((item) => item.price >= 3000000);
+
+  const luxuryListing = () => {
+    setToggleLuxuryListing(!toggleLuxuryListing);
+    console.log(toggleListing);
+    if (!toggleLuxuryListing) {
+      document.getElementById("luxury").style.backgroundImage = "none";
+      document.getElementById("luxury").classList.add("close");
+      document.getElementById("luxury").classList.remove("cover");
+    } else {
+      document.getElementById(
+        "luxury"
+      ).style.backgroundImage = `url(${luxury[0].images[0]})`;
+      document.getElementById("luxury").classList.remove("close");
+      document.getElementById("luxury").classList.add("cover");
+    }
+  };
+
   return (
     <>
       {/* <SideNav /> */}
       {toggle && <SideNav />}
-      <SearchFxn screenWidth={screenWidth} />
       <div className="listing-container">
         <Latest
           toggleLatestListing={toggleLatestListing}
@@ -112,8 +154,14 @@ const Product = ({ toggle }) => {
           toggleListing={toggleListing}
           discountListing={discountListing}
         />
+        <Luxury
+          screenWidth={screenWidth}
+          toggleLuxuryListing={toggleLuxuryListing}
+          luxuryListing={luxuryListing}
+        />
       </div>
-      <h2>Available Apartments</h2>
+      <h3>Available Apartments</h3>
+      <SearchFxn screenWidth={screenWidth} />
 
       <section className="productsContainer">
         {apartments
@@ -171,6 +219,12 @@ const Product = ({ toggle }) => {
                   <span>#{product.price}</span>
                   <span></span>
                 </div>
+                <button
+                  className="add-to-cart"
+                  onClick={() => handleAddToCart(product)}
+                >
+                  Add to cart
+                </button>
               </div>
             ))
           : "loading3.."}

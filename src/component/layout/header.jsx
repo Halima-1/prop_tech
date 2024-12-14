@@ -1,12 +1,12 @@
 import "./header.scss";
 // import "./header.css";
 import { NavLink, useNavigate } from "react-router-dom";
-import { BsCart2, BsHeart } from "react-icons/bs";
+import { BsCart2, BsHeart, BsMoonFill, BsStarFill } from "react-icons/bs";
 import { BiLogOut, BiMenuAltRight } from "react-icons/bi";
 import { PiHamburgerLight } from "react-icons/pi";
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineCloseSquare } from "react-icons/ai";
-function Header({ loading, onToggle, toggle }) {
+function Header({ onToggle, toggle }) {
   const navigate = useNavigate();
   // const [toggle, setToggle] = useState();
   const logout = () => {
@@ -17,7 +17,7 @@ function Header({ loading, onToggle, toggle }) {
 
   return (
     <>
-      <header onLoad={loading}>
+      <header>
         <nav>
           <h2 className="nav-brand">
             <span>mybrela</span>
@@ -26,7 +26,7 @@ function Header({ loading, onToggle, toggle }) {
             <li>
               <NavLink
                 className={"nav-item"}
-                to={"/"}
+                to={"/landing"}
                 style={({ isActive }) =>
                   isActive ? { color: "red" } : undefined
                 }
@@ -35,6 +35,28 @@ function Header({ loading, onToggle, toggle }) {
               </NavLink>
             </li>
             <li>
+              <NavLink
+                className={"nav-item"}
+                to={"/"}
+                style={({ isActive }) =>
+                  isActive ? { color: "red" } : undefined
+                }
+              >
+                Apartments
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={"nav-item"}
+                to={"/wishlist"}
+                style={({ isActive }) =>
+                  isActive ? { color: "red" } : undefined
+                }
+              >
+                Wishlist
+              </NavLink>
+            </li>
+            {/* <li>
               <select name="categories" id="cati" className={"nav-item"}>
                 <option value="null">Category</option>
 
@@ -42,21 +64,16 @@ function Header({ loading, onToggle, toggle }) {
                 <option value="client">Tenant</option>
                 <option value="agent">Estate agent</option>
               </select>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 className={"nav-item"}
-                to={"/product"}
-                // onClick={
-                //   localStorage.getItem("user")
-                //     ? navigate("/product")
-                //     : navigate("/login", { replace: true })
-                // }
+                to={"/cart"}
                 style={({ isActive }) =>
                   isActive ? { color: "red" } : undefined
                 }
               >
-                Manage Rentals
+                Cart
               </NavLink>
             </li>
             <li>
@@ -82,6 +99,7 @@ function Header({ loading, onToggle, toggle }) {
               </NavLink>
             </li>
           </ul>
+          {/* {mode ? <p onClick={modee}>white</p> : <p onClick={modee}>black</p>} */}
           <div className="menuBtn" onClick={onToggle}>
             {!toggle ? <BiMenuAltRight /> : <AiOutlineClose />}
           </div>

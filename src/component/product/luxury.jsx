@@ -1,25 +1,24 @@
-import { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
 import apartments from "../apartments";
 import { BiHeart } from "react-icons/bi";
 import { useNavigate } from "react-router-dom";
-import { AiOutlineClose } from "react-icons/ai";
-const Promo = ({ screenWidth, toggleListing, discountListing }) => {
+const Luxury = ({ screenWidth, toggleLuxuryListing, luxuryListing }) => {
   const route = useNavigate();
-  const promo = apartments.filter((item) => item.type == "flat");
+  const luxury = apartments.filter((item) => item.price >= 2000000);
 
   return (
     <section>
       {/* {screenWidth < 600 ? ( */}
-      <div className="cover" id="promo" onClick={discountListing}>
-        {toggleListing ? (
+      <div className="cover" id="luxury" onClick={luxuryListing}>
+        {toggleLuxuryListing ? (
           <AiOutlineClose style={{ marginTop: 40, width: 40, height: 40 }} />
         ) : (
-          <p>10% discount</p>
+          <p>Luxury</p>
         )}
       </div>
       <div className="listing">
-        {toggleListing
-          ? promo.slice(0, 5).map((product) => (
+        {toggleLuxuryListing
+          ? luxury.slice(0, 5).map((product) => (
               <div
                 onMouseEnter={() => {
                   const productIcon = document.getElementById(
@@ -41,29 +40,19 @@ const Promo = ({ screenWidth, toggleListing, discountListing }) => {
                   productIcon.classList.add("hideProductIcons");
                 }}
                 key={product.id}
-                className="productsContainer_div "
+                className="productsContainer_div"
                 onClick={() => {
                   route(`/productDetails/${product.id}`);
                 }}
               >
-                {/* <BsEye
-            onClick={() => {
-              route(`/productDetails/${product.id}`);
-            }}
-            className="productElement hideProductIcons"
-            id={`product-icons${product.id}`}
-          /> */}
-
                 {/* <p
-                  onClick={() => {
-                    route(`/productDetails/${product.id}`);
-                  }}
+                  
                   className="productElement hideProductIcons"
                   id={`product-icons${product.id}`}
                 >
                   View details
-                </p>
-                <BiHeart
+                </p> */}
+                {/* <BiHeart
                   className="wish"
                   onClick={() => handleAddToWishlist(product)}
                 /> */}
@@ -90,4 +79,4 @@ const Promo = ({ screenWidth, toggleListing, discountListing }) => {
   );
 };
 
-export default Promo;
+export default Luxury;
