@@ -37,7 +37,7 @@ function Header({ onToggle, toggle }) {
             <li>
               <NavLink
                 className={"nav-item"}
-                to={"/"}
+                to={"/product"}
                 style={({ isActive }) =>
                   isActive ? { color: "red" } : undefined
                 }
@@ -65,7 +65,7 @@ function Header({ onToggle, toggle }) {
                 <option value="agent">Estate agent</option>
               </select>
             </li> */}
-            <li>
+            {/* <li>
               <NavLink
                 className={"nav-item"}
                 to={"/cart"}
@@ -75,7 +75,7 @@ function Header({ onToggle, toggle }) {
               >
                 Cart
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink
                 className={"nav-item"}

@@ -12,6 +12,7 @@ import Product from "./component/product/product";
 import Details from "./component/productDetails/productDetails";
 import Wishlist from "./component/wishlist/wishlist";
 import Cart from "./component/cart/cart";
+import SideNav from "./component/layout/sideNavBar";
 
 // import SideNav from "./component/sideNavBar";
 function App() {
@@ -48,6 +49,7 @@ function App() {
           // modee={modee}
           // mode={mode}
         />
+        <SideNav />
         <Outlet />
         <Footer />
       </>
@@ -57,8 +59,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route path="/" element={<Product toggle={toggle} />} />
-          <Route path="/landing" element={<Home toggle={toggle} />} />
+          <Route path="/" element={<Home toggle={toggle} />} />
+          <Route path="/product" element={<Product toggle={toggle} />} />
           <Route path="/productDetails/:id" element={<Details />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/cart" element={<Cart />} />

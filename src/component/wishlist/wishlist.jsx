@@ -3,15 +3,18 @@ import "./wishlist.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { BsTrash3 } from "react-icons/bs";
 // import { product } from "../../assets/productImages";
+import SideNav from "../layout/sideNavBar";
 
-const Wishlist = () => {
-  const user = JSON.parse(localStorage.getItem("user")) || [];
-  const wishList = user[0].wishList;
+const Wishlist = ({ toggle }) => {
+  // const user = JSON.parse(localStorage.getItem("user")) || [];
+  const wishList = JSON.parse(localStorage.getItem("user-wishlist")) || [];
   console.log(wishList);
   const totalWishListItem = wishList.length;
   const route = useNavigate();
   return (
     <>
+      {/* {toggle && <SideNav />} */}
+
       <main>
         <div className="container">
           <div className="item">

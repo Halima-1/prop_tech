@@ -44,7 +44,7 @@ function SideNav({ loading, toggle }) {
               <option value="agent">Estate agent</option>
             </select>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               className={"nav-item"}
               to={"/cart"}
@@ -54,7 +54,7 @@ function SideNav({ loading, toggle }) {
             >
               Cart
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               className={"nav-item"}

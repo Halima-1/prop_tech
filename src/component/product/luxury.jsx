@@ -65,12 +65,12 @@ const Luxury = ({ screenWidth, toggleLuxuryListing, luxuryListing }) => {
                   {/* <span>#{product.price}</span> */}
                   <span></span>
                 </div>
-                <button
+                {/* <button
                   className="add-to-cart"
                   onClick={() => onAddToCart(product)}
                 >
                   Add to cart
-                </button>
+                </button> */}
               </div>
             ))
           : null}

@@ -14,28 +14,28 @@ const Product = ({ toggle }) => {
   const route = useNavigate();
   console.log(apartments);
   // ADD TO CART FUNCTION
-  const handleAddToCart = (apartments) => {
-    // const userCart = user[0].cart || [];
-    const userCart = localStorage.getItem("user-cart")
-      ? JSON.parse(localStorage.getItem("user-cart"))
-      : [];
-    const checkCart = userCart.find((item) => item.id === apartments.id);
-    if (checkCart) {
-      console.log(checkCart);
-      checkCart.quantity = checkCart.quantity + 1;
-      console.log(" item exist");
-    } else {
-      userCart.unshift({ ...apartments, quantity: 1 });
-      // setCart([...cart, product]);
-      console.log("no existing item");
-      localStorage.setItem("user-cart", JSON.stringify(userCart));
-      console.log(userCart);
-    }
+  // const handleAddToCart = (apartments) => {
+  //   // const userCart = user[0].cart || [];
+  //   const userCart = localStorage.getItem("user-cart")
+  //     ? JSON.parse(localStorage.getItem("user-cart"))
+  //     : [];
+  //   const checkCart = userCart.find((item) => item.id === apartments.id);
+  //   if (checkCart) {
+  //     console.log(checkCart);
+  //     checkCart.quantity = checkCart.quantity + 1;
+  //     console.log(" item exist");
+  //   } else {
+  //     userCart.unshift({ ...apartments, quantity: 1 });
+  //     // setCart([...cart, product]);
+  //     console.log("no existing item");
+  //     localStorage.setItem("user-cart", JSON.stringify(userCart));
+  //     console.log(userCart);
+  //   }
 
-    // To update each user's cart
-    console.log(userCart);
-    updateUser.cart = userCart;
-  };
+  //   // To update each user's cart
+  //   console.log(userCart);
+  //   updateUser.cart = userCart;
+  // };
 
   // media query with javascript
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -70,10 +70,10 @@ const Product = ({ toggle }) => {
     }
     console.log(userWishList);
 
-    user[0].wishList = userWishList;
-    console.log(user);
+    // user[0].wishList = userWishList;
+    // console.log(user);
 
-    updateUser.wishList = userWishList;
+    // updateUser.wishList = userWishList;
     localStorage.setItem("user-wishlist", JSON.stringify(userWishList));
     localStorage.setItem("user", JSON.stringify(user));
     localStorage.setItem("users", JSON.stringify(allUsers));
@@ -219,12 +219,12 @@ const Product = ({ toggle }) => {
                   <span>#{product.price}</span>
                   <span></span>
                 </div>
-                <button
+                {/* <button
                   className="add-to-cart"
                   onClick={() => handleAddToCart(product)}
                 >
                   Add to cart
-                </button>
+                </button> */}
               </div>
             ))
           : "loading3.."}
